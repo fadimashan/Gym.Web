@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Gym.Core.Entities
 {
-    class ApplicationUser : IdentityUser
+    public class ApplicationUser : IdentityUser
     {
 
         public ICollection<ApplicationUserGymClass> AttendedClasses { get; set; }
