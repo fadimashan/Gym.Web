@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Gym.Core.Entities;
 using Gym.Data.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Gym.Web.Controllers
 {
+    [Authorize]
     public class GymClassesController : Controller
     {
         private readonly ApplicationDbContext _context;
