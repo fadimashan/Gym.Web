@@ -43,13 +43,13 @@ namespace Gym.Web
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.Configure<IdentityOptions>(options =>
-            {
-                options.Password.RequiredLength = 8;
-                options.Password.RequireDigit = true;
-                options.Password.RequireNonAlphanumeric = true;
-                options.User.RequireUniqueEmail = true;
-            });
+            //services.Configure<IdentityOptions>(options =>
+            //{
+            //    options.Password.RequiredLength = 8;
+            //    options.Password.RequireDigit = true;
+            //    options.Password.RequireNonAlphanumeric = true;
+            //    options.User.RequireUniqueEmail = true;
+            //});
 
             services.AddControllersWithViews();
         }
