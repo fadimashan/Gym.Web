@@ -58,8 +58,10 @@ namespace Gym.Web.Areas.Identity.Pages.Account
 
             [Required]
             [Display(Name = "Last Name")]
-            public string LastName { get; set; } 
-            
+            public string LastName { get; set; }
+
+            public string FullName => FirstName + " " + LastName;
+
             [Required]
             [DataType(DataType.Date)]
             [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]

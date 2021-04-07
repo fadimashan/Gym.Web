@@ -64,7 +64,8 @@ namespace Gym.Data
                     UserName = adminName,
                     Email = adminEmail,
                     PersonalIdNum = "1234-12-12-1234",
-                    Birthdate = DateTime.Now - TimeSpan.FromDays(10000)
+                    Birthdate = DateTime.Now - TimeSpan.FromDays(10000),
+                 
 
                 };
 
@@ -72,7 +73,7 @@ namespace Gym.Data
 
                 if (!addAdminResult.Succeeded) throw new Exception(string.Join("\n", addAdminResult.Errors));
 
-                var adminUser = await userManager.FindByNameAsync(adminName);
+                var adminUser = await userManager.FindByEmailAsync(adminEmail);
 
                 foreach (var role in roleNames)
                 {
